@@ -1,0 +1,204 @@
+
+@media (max-width:1440px){
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+ 
+}
+ header{
+    font-weight: 400px;
+}
+body{
+    
+    font-family: "Poppins", sans-serif;
+    
+    font-style: normal;
+    
+    height: 100vh;
+    display: flex;
+    flex: row wrap;
+    justify-content: center;
+    align-items: center;
+    min-width: 375px;
+    max-width: 1440px;
+    background-color: #cdcfd8;
+    font-family: 'Poppins';
+     
+    
+}
+.big{
+    width: 800px;
+   
+    height: 450px; 
+    background-color: #faf4f4;
+    border-radius:20px 20px 150px 20px ;
+    
+    
+}
+.big-papa{
+      
+    background-color: #2a2a2a;
+}
+.son1{
+    
+    display: flex;
+    flex: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    position: relative;
+    right: 50px;
+}
+input{
+    width: 130px;
+    height: 50px;
+    font-size: 32px;
+    color: #2a2a2a;
+     
+    border-radius: 10px solid ;
+
+}
+
+
+span{
+    color: #6442df;
+    font-family: 'Poppins';
+     font-style: italic;
+}
+hr{
+   position: relative;
+   left: 80px;
+   bottom: 50px;
+   margin-bottom: 10px;
+   
+}
+img{
+    size: 50%;
+    height: 80px;
+}
+.gd{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 10px;
+    right: 30px;
+}
+button{
+    border-radius: 80px;
+    cursor: pointer;
+    background-color: #6442df;
+    border: none;
+    height: 80px;
+    z-index: 1;
+}
+.son2{
+    display: block;
+    flex: row;
+    height: 200px;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+    position: relative;
+    left: 45px;
+    bottom: 40px;
+}
+ }
+ @media (min-width:376px) and (max-width:430px){
+    input{
+        position: absolute;
+        width: 80px;
+        height: 30px;
+        margin-top: 5px;
+    }
+    hr{
+        top: -20px;
+        left: 35px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    button{
+        height: 50px;
+        width: 50px;
+        
+    }
+    img{
+        height: 30px;
+        width: 30px;
+    }
+    .gd{
+        right: 200px;
+        bottom: -35px;
+    }
+    input::placeholder {
+        font-size: 25px;
+    }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media (max-width:375px){
+    .big{
+        width: 90%;
+    }
+    .son1{
+      position: relative;
+      right: 15px;
+    }
+    hr{
+        
+        top: 3px;
+        left: 40px;
+        border: 1px solid;
+    }
+    input{
+        position:absolute;
+        width: 70px;
+        height: 50px;
+        
+        font-size: 22px;
+    
+    }
+    .gd{
+        text-align: center;
+        margin-top: 50px;
+    }
+    img{
+
+        height: 40px;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        
+        
+          
+    }
+    button{
+        position: relative;
+        height: 60px;
+        width: 60px;
+        top: 45px;
+        right: 110px;
+        z-index: 1;
+    }
+
+    .son2{
+        position: relative;
+        top: 20px;
+    }
+     
+ }

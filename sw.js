@@ -1,17 +1,17 @@
-const CacheName = 'pwa-cache-v1';
+const CACHE_NAME = 'pwa-cache-v1';
 const filesToCache = [
   '/',
   'index.html',
   'index.css',
-  'assets/daycare.png/images/logo.png',
- 
+  'assets/daycare.png',  // Ensure this path is correct
+  'assets/logo.png'      // Ensure this path is correct
 ];
 
 // Install the service worker
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(ASSETS_TO_CACHE);
+      return cache.addAll(filesToCache); // Use filesToCache here
     })
   );
 });
@@ -39,4 +39,5 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
+
 

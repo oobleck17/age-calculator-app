@@ -2,7 +2,7 @@
     "name": "Soft Pinko",
     "short_name": "Pinko",
     "description": "A beautiful and user-friendly app for managing your tasks with a soft pink theme.",
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#cdcfd8",
     "theme_color": "#faf4f4",

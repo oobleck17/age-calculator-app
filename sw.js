@@ -4,9 +4,7 @@ const ASSETS_TO_CACHE = [
   '/',                // Home page
   'index.html',      // HTML file
   'index.css',  // CSS file
-  '/js/app.js',       // JavaScript file
   'assets/images/icon-arrow.svg', // Logo or other images
-  '/offline.html'     // Offline fallback page
 ];
 
 // Install event - cache app shell assets

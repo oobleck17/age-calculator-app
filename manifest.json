@@ -1,0 +1,24 @@
+{
+    "name": "Soft Pinko",
+    "short_name": "Pinko",
+    "description": "A beautiful and user-friendly app for managing your tasks with a soft pink theme.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#cdcfd8",
+    "theme_color": "#faf4f4",
+    "icons": [
+      {
+        "src": "/images/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/images/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "orientation": "portrait",
+    "scope": "/"
+  }
+  

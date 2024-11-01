@@ -3,8 +3,8 @@ const ASSETS_TO_CACHE = [
   '/',
   'index.html',
   'index.css',
-  '/assets/daycare.png/images/logo.png',
-  '/offline.html'
+  'assets/daycare.png/images/logo.png',
+ 
 ];
 
 // Install the service worker

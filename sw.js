@@ -1,5 +1,5 @@
 const CACHE_NAME = 'pwa-cache-v1';
-const ASSETS_TO_CACHE = [
+const filesToCache = [
   '/',
   'index.html',
   'index.css',

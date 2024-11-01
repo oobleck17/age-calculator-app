@@ -5,7 +5,7 @@ const ASSETS_TO_CACHE = [
   'index.html',      // HTML file
   'index.css',  // CSS file
   '/js/app.js',       // JavaScript file
-  'assets/images/logo.png', // Logo or other images
+  'assets/images/icon-arrow.svg', // Logo or other images
   '/offline.html'     // Offline fallback page
 ];
 

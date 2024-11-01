@@ -1,10 +1,12 @@
 // Define the cache name and list of assets to cache
 const CACHE_NAME = 'pwa-cache-v1';
-const ASSETS_TO_CACHE = [
-  '/',                // Home page
-  'index.html',      // HTML file
-  'index.css',  // CSS file
-  'assets/images/icon-arrow.svg', // Logo or other images
+const ASSETS = [
+  '/age-calculator-app/',
+  '/age-calculator-app/index.html',
+  '/age-calculator-app/css/styles.css',
+  '/age-calculator-app/js/app.js',
+  '/age-calculator-app/images/logo.png',
+  '/age-calculator-app/offline.html'
 ];
 
 // Install event - cache app shell assets

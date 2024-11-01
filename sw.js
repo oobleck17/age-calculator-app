@@ -1,10 +1,9 @@
 const CACHE_NAME = 'pwa-cache-v1';
 const ASSETS_TO_CACHE = [
   '/',
-  '/index.html',
-  '/css/styles.css',
-  '/js/app.js',
-  '/images/logo.png',
+  'index.html',
+  'index.css',
+  '/assets/daycare.png/images/logo.png',
   '/offline.html'
 ];
 

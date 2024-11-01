@@ -1,71 +1,43 @@
-// Define the cache name and list of assets to cache
 const CACHE_NAME = 'pwa-cache-v1';
-const ASSETS = [
-  '/age-calculator-app/',
-  '/age-calculator-app/index.html',
-  '/age-calculator-app/css/styles.css',
-  '/age-calculator-app/js/app.js',
-  '/age-calculator-app/assets/images/CompressJPEG.online_512x512_image.png',
-  '/age-calculator-app/offline.html'
+const ASSETS_TO_CACHE = [
+  '/',
+  '/index.html',
+  '/css/styles.css',
+  '/js/app.js',
+  '/images/logo.png',
+  '/offline.html'
 ];
 
-// Install event - cache app shell assets
+// Install the service worker
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('Caching app shell assets');
       return cache.addAll(ASSETS_TO_CACHE);
     })
   );
-  self.skipWaiting(); // Activate service worker immediately after install
 });
 
-// Activate event - clear old caches if any
+// Activate the service worker
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
-        cacheNames.map((cache) => {
-          if (cache !== CACHE_NAME) {
-            console.log('Deleting old cache:', cache);
-            return caches.delete(cache);
+        cacheNames.map((name) => {
+          if (name !== CACHE_NAME) {
+            return caches.delete(name);
           }
         })
       );
     })
   );
-  self.clients.claim(); // Take control of all pages immediately
 });
 
-// Fetch event - respond with cached content or fetch from network
+// Fetch event to serve cached assets
 self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      // Return cached response if found, or fetch from network
-      return cachedResponse || fetch(event.request).then((networkResponse) => {
-        return caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, networkResponse.clone());
-          return networkResponse;
-        });
-      });
-    }).catch(() => {
-      // If both cache and network fail, serve offline fallback
-      return caches.match('/offline.html');
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request);
     })
   );
 });
 
-
-
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then((registration) => {
-          console.log('Service Worker registered with scope:', registration.scope);
-        })
-        .catch((error) => {
-          console.log('Service Worker registration failed:', error);
-        });
-    });
-  }
-  

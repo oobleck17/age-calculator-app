@@ -5,7 +5,7 @@ const ASSETS = [
   '/age-calculator-app/index.html',
   '/age-calculator-app/css/styles.css',
   '/age-calculator-app/js/app.js',
-  '/age-calculator-app/images/logo.png',
+  '/age-calculator-app/assets/images/CompressJPEG.online_512x512_image.png',
   '/age-calculator-app/offline.html'
 ];
 
